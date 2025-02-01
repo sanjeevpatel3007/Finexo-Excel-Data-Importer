@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { 
   Container, 
   Box, 
@@ -21,7 +21,7 @@ import axios from 'axios';
 import FileUpload from './components/FileUpload';
 import DataPreview from './components/DataPreview';
 import ErrorDisplay from './components/ErrorDisplay';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer,  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { 
   handleAxiosError, 
@@ -35,7 +35,7 @@ import {
   ApiError
 } from './utils/errorHandling';
 
-const BACKEND_URL = 'http://localhost:3000';
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:3000';
 
 // Configure axios defaults
 axios.defaults.withCredentials = true;
