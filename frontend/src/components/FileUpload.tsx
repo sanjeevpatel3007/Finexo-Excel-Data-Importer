@@ -68,8 +68,7 @@ const FileUpload: React.FC<FileUploadProps> = ({
   const {
     getRootProps,
     getInputProps,
-    isDragActive,
-    fileRejections
+    isDragActive
   } = useDropzone({
     onDrop,
     accept: {

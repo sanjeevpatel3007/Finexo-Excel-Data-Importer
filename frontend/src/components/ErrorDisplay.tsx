@@ -51,7 +51,7 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ open, onClose, errors }) =>
   const [selectedTab, setSelectedTab] = useState(0);
   const sheetNames = Object.keys(errors);
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleTabChange = (_: React.SyntheticEvent, newValue: number) => {
     setSelectedTab(newValue);
   };
 
