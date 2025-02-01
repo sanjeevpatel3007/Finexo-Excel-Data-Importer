@@ -2,6 +2,12 @@
 
 A full-stack web application for importing, validating, and processing Excel data with a modern user interface and robust backend processing capabilities.
 
+## 🔗 Important Links
+
+- **Live Demo:** [https://finexo-excel-data-importer.vercel.app/](https://finexo-excel-data-importer.vercel.app/)
+- **GitHub Repository:** [https://github.com/sanjeevpatel3007/Finexo-Excel-Data-Importer](https://github.com/sanjeevpatel3007/Finexo-Excel-Data-Importer)
+- **Author Profile:** [https://github.com/sanjeevpatel3007](https://github.com/sanjeevpatel3007)
+
 ## 🌟 Overview
 
 The Finexo Excel Data Importer is a comprehensive solution for handling Excel data imports with validation, preview, and processing capabilities. It features a React-based frontend with Material-UI components and a Node.js/Express backend with MongoDB integration.
@@ -124,7 +130,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👥 Authors
 
-- Your Name - *Initial work* - [YourGithub](https://github.com/yourusername)
+- Sanjeev Patel - *Initial work* - [sanjeevpatel3007](https://github.com/sanjeevpatel3007)
 
 ## 🙏 Acknowledgments
 
