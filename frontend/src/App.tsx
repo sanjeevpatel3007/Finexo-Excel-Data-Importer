@@ -87,7 +87,6 @@ function App() {
   const [showErrors, setShowErrors] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [isValidated, setIsValidated] = useState(false);
-  const [validatedData, setValidatedData] = useState<SheetData | null>(null);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
   const [isLoading, setIsLoading] = useState(false);
   const [activeStep, setActiveStep] = useState(0);
@@ -104,7 +103,7 @@ function App() {
       setIsLoading(true);
       setActiveStep(0);
       setIsValidated(false);
-      setValidatedData(null);
+      setSheets({});
       setErrors({});
       setShowErrors(false);
       setSuccessMessage('');
@@ -247,7 +246,7 @@ function App() {
       
       if ('success' in response.data && response.data.success) {
         setIsValidated(true);
-        setValidatedData(sheets);
+        setSheets(sheets);
         setActiveStep(2);
         setShowErrors(false);
         setErrors({});
@@ -299,7 +298,6 @@ function App() {
         // Reset states after successful import
         setSheets({});
         setIsValidated(false);
-        setValidatedData(null);
         setCurrentFile(null);
         setActiveStep(0);
       } else {
@@ -368,7 +366,7 @@ function App() {
             orientation={isMobile ? 'vertical' : 'horizontal'}
             sx={{ mb: 4 }}
           >
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <Step key={step.label} completed={step.completed}>
                 <StepLabel>{step.label}</StepLabel>
               </Step>

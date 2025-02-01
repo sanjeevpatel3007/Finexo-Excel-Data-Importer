@@ -65,7 +65,12 @@ const FileUpload: React.FC<FileUploadProps> = ({
     }
   }, [onFileSelect, maxFileSize]);
 
-  const { getRootProps, getInputProps, isDragActive, isDragReject } = useDropzone({
+  const {
+    getRootProps,
+    getInputProps,
+    isDragActive,
+    fileRejections
+  } = useDropzone({
     onDrop,
     accept: {
       'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet': ['.xlsx']

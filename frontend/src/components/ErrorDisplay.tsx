@@ -56,7 +56,7 @@ const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ open, onClose, errors }) =>
   };
 
   return (
-    <Dialog open={open} onClose={onClose} maxWidth="md" fullWidth>
+    <Dialog open={open} onClose={() => onClose()} maxWidth="md" fullWidth>
       <DialogTitle>
         <Box display="flex" alignItems="center" justifyContent="space-between">
           <Typography variant="h6">Validation Errors</Typography>
